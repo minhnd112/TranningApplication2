@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#97d5e0"
+    android:orientation="vertical">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#6bbbc8"
+        android:id="@id/menu_bar"
+        >
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User manager"
+            android:textSize="20dp"/>
+        <ImageButton
+            android:id="@+id/btnConfirm"
+            android:layout_alignParentRight="true"
+            android:background="#6bbbc8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@drawable/confirm_button"
+            />
+    </RelativeLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/btnAddImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_below="@+id/menu_bar"
+        android:layout_margin="20dp"
+        android:background="#97d5e0"
+        android:src="@drawable/photo_button"/>
+    <TextView
+        android:id="@+id/pnlFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAddImage"
+        android:layout_marginTop="23dp"
+
+        android:text="Full name: "
+        android:textSize="20dp" />
+    <EditText
+        android:id="@+id/txtFullName"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/pnlFullName"
+        android:layout_alignBottom="@+id/pnlFullName"
+        android:layout_alignLeft="@+id/txtAccount"
+        android:layout_alignStart="@+id/txtAccount"
+        android:textColor="#f000" />
+
+    <TextView
+        android:id="@+id/pnlAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pnlFullName"
+        android:layout_alignStart="@+id/pnlFullName"
+        android:layout_below="@+id/pnlFullName"
+        android:layout_marginTop="43dp"
+        android:text="Account: "
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/txtAccount"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pnlAccount"
+        android:layout_alignLeft="@+id/btnAddImage"
+        android:layout_alignStart="@+id/btnAddImage"
+        android:textColor="#f000" />
+</RelativeLayout>
